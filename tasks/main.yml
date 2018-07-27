@@ -22,4 +22,4 @@
     type: CNAME
     record: "{{ item }}"
     value: "{{ inventory_hostname }}.{{ dns_domain }}"
-  with_items: "{{ cname }}"
+  loop: "{{ cname }}"
