@@ -1,0 +1,10 @@
+#! /usr/bin/env ansible-playbook
+# Configure CloudFlare DNS entries
+---
+- name: cloudflare | DNS
+  hosts: all
+  roles:
+  - role: cloudflare
+    tags:
+    - cloudflare
+    - dns
